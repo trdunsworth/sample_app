@@ -21,7 +21,7 @@ describe PagesController do
       response.should be_success
     end
     
-    if "should have the right title" do
+    it "should have the right title" do
       get 'home'
       response.should have_tag("title", "Ruby on Rails Tutorial Sample App | Contact")
     end
