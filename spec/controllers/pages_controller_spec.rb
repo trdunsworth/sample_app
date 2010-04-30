@@ -7,6 +7,11 @@ describe PagesController do
       get 'home'
       response.should be_success
     end
+    
+    it "should have the right title" do
+      get 'home'
+      response.should have_tag("title", "Ruby on Rails Tutorial Sample App | Home")
+    end
   end
 
   describe "GET 'contact'" do
@@ -14,12 +19,22 @@ describe PagesController do
       get 'contact'
       response.should be_success
     end
+    
+    if "should have the right title" do
+      get 'home'
+      response.should have_tag("title", "Ruby on Rails Tutorial Sample App | Contact")
+    end
   end
   
   describe "GET 'about'" do
   	it "should be successful" do
   	  get 'about'
   	  response.should be_success
+  	end
+  	
+  	it "should have the right title" do
+  	  get 'about'
+  	  response.should have_tag("title", "Ruby on Rails Tutoral Sample App | About")
   	end
   end
 end
