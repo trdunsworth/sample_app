@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe PagesController do
+  integrate_views
 
   describe "GET 'home'" do
     it "should be successful" do
